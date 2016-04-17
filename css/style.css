@@ -1,0 +1,35 @@
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.header {
+    width: 100vw;
+    border-bottom: 1px solid lightgrey;
+    background-color: darkgray;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #dcdcdc;
+    width: 100vw;
+    border-radius: 0;
+}
+
+.navbar-toggle {
+    border: 1px solid #808080;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.icon-bar {
+    border: 1px solid #808080;
+}
+
