@@ -7,53 +7,100 @@
     <title>Meg Dahlgren</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+    <!-- build:css ./css/site.css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
 
 </head>
 <body>
+<div class="wrapper">
+    <section class="container">
+        <div class="modal-div"></div>
+    </section>
 
-<section>
-    <nav role="navigation" class="navbar text-center">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"
-                        aria-expanded="false">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+    <section>
+        <nav role="navigation" class="navbar text-center">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"
+                            aria-expanded="false">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="main-nav">
+                    <ul class="nav navbar-nav">
+                        <li id="portfolio-link"><a href="#/">Portfolio <span
+                                class="sr-only">(current)</span></a></li>
+                        <li id="about-link"><a href="#/about">About</a></li>
+                    </ul>
+                </div>
             </div>
+        </nav>
+    </section>
 
-            <div class="collapse navbar-collapse" id="main-nav">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#/">Portfolio <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#/about">About</a></li>
-                </ul>
+    <section class="container text-center header">
+        <header>
+            <h1>Meg Dahlgren</h1>
+            <h3>Front End Developer</h3>
+        </header>
+
+    </section>
+
+    <section class="container">
+
+        <div class="row portfolio-row" id="main-content">
+        </div>
+
+        <div class="row portfolio-row" id="templates">
+        </div>
+
+    </section>
+
+    <script type="text/template" id="project">
+        <div class="col-sm-4">
+            <h4><%= title %></h4>
+            <div class="img-wrapper border">
+                <img class="img-responsive <%= imgclass %>" src="<%= img_source %>">
+            </div>
+            <a href="<%= sourcecode %>" target="_blank"><%= sourcecodelinkname %>&nbsp</a>
+            <a href="<%= hosted %>" target="_blank">&nbsp<%= hostedlinkname %></a>
+        </div>
+    </script>
+
+    <script type="text/template" id="about">
+        <div class="col-md-2">
+            <div class="img-wrapper">
+                <img class="img-responsive" style="padding-top: 5px;" src="<%= img %>">
             </div>
         </div>
-    </nav>
-</section>
-
-<section class="container text-center header">
-    <header>
-        <h1>Meg Dahlgren</h1>
-        <h2>Front End Developer</h2>
-    </header>
-
-</section>
-
-<section class="container view-content">
-
-        <div class="row">
-            <h2>Featured Work</h2>
-            <h4>Coming Soon!</h4>
+        <div class="col-md-10">
+            <h3>About Meg</h3>
+            <p><%= about1 %></p>
+            <p><%= about2 %></p>
         </div>
+    </script>
 
-</section>
 
+    <script src="bower_components/jquery-2.2.3.min/index.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="bower_components/backbone/backbone-min.js"></script>
 
-<script src="bower_components/jquery-2.2.3.min/index.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- build:js ./js/site.js -->
+    <script src="js/About.js"></script>
+    <script src="js/Project.js"></script>
+    <script src="js/AboutCollection.js"></script>
+    <script src="js/ProjectCollection.js"></script>
+    <script src="js/ProjectView.js"></script>
+    <script src="js/AboutView.js"></script>
+    <script src="js/AppView.js"></script>
+    <script src="js/app.js"></script>
+    <!-- endbuild -->
+</div>
 </body>
 </html>

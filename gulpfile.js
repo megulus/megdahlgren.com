@@ -1,22 +1,40 @@
-var gulp = require('gulp');
-var bower = require('gulp-bower');
-var awspublish = require('gulp-awspublish');
+var gulp = require('gulp'),
+    mainBowerFiles = require('gulp-bower'),
+    awspublish = require('gulp-awspublish'),
+    usemin = require('gulp-usemin'),
+    minifyhtml = require('gulp-htmlmin'),
+    cleancss = require('gulp-clean-css'),
+    uglify = require('gulp-uglify'),
+    debug = require('gulp-debug');
+
+
+
+
 
 gulp.task('bower', function () {
-    return bower('build/bower_components');
+    return mainBowerFiles('./bower_components')
+        .pipe(gulp.dest('build/bower_components'))
 });
 
-gulp.task('css', function () {
-    return gulp.src('./css/**/*.css', {'base': '.'})
-        .pipe(gulp.dest('./build/'));
-});
 
-gulp.task('html', function() {
+gulp.task('build', ['bower', 'images', 'usemin']);
+
+gulp.task('usemin', function() {
     return gulp.src('*.html')
-        .pipe(gulp.dest('./build/'));
+        .pipe(usemin({
+            html: [minifyhtml({ collapseWhitespace: true })],
+            css: [cleancss({ compatibility: 'ie8' })],
+            js: [uglify(), 'concat']
+        }))
+        .pipe(debug({ title: 'usemin-debug' }))
+        .pipe(gulp.dest('build'))
 });
 
-gulp.task('build', ['bower', 'css', 'html']);
+gulp.task('images', function() {
+    return gulp.src(['./images/*.png', './images/*.jpg'])
+        .pipe(debug({ title: 'images-debug' }))
+        .pipe(gulp.dest('build/images'))
+});
 
 gulp.task('publish', function () {
 

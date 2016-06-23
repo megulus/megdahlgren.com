@@ -2,6 +2,30 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
+.img-wrapper {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    max-height: 210px;
+    overflow-y: scroll;
+    background-color: transparent;
+}
+
+img {
+    max-width: 100%;
+}
+
+.border {
+    border: 1px solid #cccccc;
+}
+
+.template {
+    overflow-y: scroll;
+}
+
 .header {
     width: 100vw;
     border-bottom: 1px solid lightgrey;
@@ -29,7 +53,20 @@ body {
     text-align: center;
 }
 
+.active {
+    background-color: #eeeeee;
+    color: #000000;
+}
+
+.active a {
+    color: #000000;
+}
+
 .icon-bar {
     border: 1px solid #808080;
+}
+
+.portfolio-row {
+    margin-bottom: 10px;
 }
 
