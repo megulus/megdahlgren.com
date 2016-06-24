@@ -31,7 +31,7 @@ gulp.task('usemin', function() {
 });
 
 gulp.task('images', function() {
-    return gulp.src(['./images/*.png', './images/*.jpg'])
+    return gulp.src(['./images/*.png', './images/*.jpg', './images/*.ico'])
         .pipe(debug({ title: 'images-debug' }))
         .pipe(gulp.dest('build/images'))
 });
