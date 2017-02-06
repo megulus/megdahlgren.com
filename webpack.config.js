@@ -4,7 +4,11 @@ var path = require('path');
 var loaders = require('./webpack.loaders');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
+loaders.push({
+    test: /\.jsx?$/,
+    exclude: /(node_modules|build\/)/,
+    loader: "babel"
+});
 
 module.exports = {
     entry: [
