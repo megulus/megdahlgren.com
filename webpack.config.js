@@ -10,6 +10,29 @@ loaders.push({
     loader: "babel"
 });
 
+// local scss modules
+loaders.push({
+	test: /\.scss$/,
+	exclude: /(node_modules|public\/)/,
+	loaders: [
+		'style?sourceMap',
+		'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]&sourceMap',
+		'postcss',
+		'sass'
+	]
+});
+
+// local css modules
+loaders.push({
+	test: /\.css$/,
+	exclude: /(node_modules|public\/)/,
+	loaders: [
+		'style?sourceMap',
+		'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]&sourceMap',
+		'postcss'
+	]
+});
+
 module.exports = {
     entry: [
         './src/js/client.jsx'

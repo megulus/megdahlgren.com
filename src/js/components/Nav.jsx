@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import { IndexLink, Link } from 'react-router';
 
+import grid from '../../scss/app.scss';
+
 class Nav extends Component {
 
     render() {
@@ -8,10 +10,10 @@ class Nav extends Component {
             <nav>
                 <div>
                     <ul>
-                        <li>
+                        <li className={grid.navL}>
                             <IndexLink activeClassName="active" onlyActiveOnIndex={true} to="/">Portfolio</IndexLink>
                         </li>
-                        <li>
+                        <li className={grid.navR}>
                             <Link activeClassName="active" to="about">About</Link>
                         </li>
                     </ul>
