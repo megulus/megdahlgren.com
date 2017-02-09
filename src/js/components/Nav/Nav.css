@@ -1,0 +1,8 @@
+li {
+    list-style: none;
+}
+
+.navbar {
+    composes: light-grey-bkgrnd from '../../../css/colors.css';
+    padding: 0.05em;
+}

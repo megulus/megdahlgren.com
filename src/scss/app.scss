@@ -20,3 +20,9 @@ $susy: (columns: 12,
   @include prefix(6 of 12);
   @include suffix(3 of 12);
 }
+
+.header {
+  @include prefix(4 of 12);
+  @include suffix(4 of 12);
+}
+
