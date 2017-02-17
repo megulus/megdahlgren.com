@@ -1,0 +1,19 @@
+
+
+.imgbox {
+    display: block;
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 343px;
+    height: 201px;
+    border: 1px #cccccc solid;
+}
+
+
+.calorieTracker {
+    background-image: url('./images/health-tracker-resize-50-comp.png');
+}
+
+.neighborhoodMap {
+    background-image: url('../../../../images/nbhd-map-resize-50-comp.png');
+}

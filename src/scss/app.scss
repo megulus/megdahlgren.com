@@ -26,3 +26,7 @@ $susy: (columns: 12,
   @include suffix(4 of 12);
 }
 
+.galleryItem {
+  @include gallery(4 of 12);
+}
+
