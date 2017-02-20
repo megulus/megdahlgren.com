@@ -1,6 +1,9 @@
 @import "../../node_modules/susy/sass/susy";
 
 $susy: (columns: 12,
+        column-width: 80px,
+        gutter-width: 20px,
+        grid-padding: 10px,
         global-box-sizing: border-box,
 );
 
@@ -26,7 +29,28 @@ $susy: (columns: 12,
   @include suffix(4 of 12);
 }
 
-.galleryItem {
+/*.galleryItem {
   @include gallery(4 of 12);
+}*/
+
+
+.column1 {
+  @include span(4 of 12);
 }
 
+.column2 {
+  @include span(4 of 12 at 5);
+}
+
+.column3 {
+  @include span(4 of 12 at 9);
+}
+
+/*.sidebarL {
+  @include span(4 of 12);
+  @include suffix(8 of 12);
+}*/
+
+.row {
+  @include span(12 of 12);
+}
