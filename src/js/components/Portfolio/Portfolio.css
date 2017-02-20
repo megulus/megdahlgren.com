@@ -15,5 +15,18 @@
 }
 
 .neighborhoodMap {
-    background-image: url('../../../../images/nbhd-map-resize-50-comp.png');
+    background-image: url('./images/nbhd-map-resize-50-comp.png');
 }
+
+.outlook2011 {
+    background-image: url('./images/ol2011-vertical-allowed-1366.png');
+}
+
+.iPhone6SPlus {
+    background-image: url('./images/iphone6splus-vertical-allowed-1366.png');
+}
+
+.iPhone6 {
+    background-image: url('./images/iphone6s-vertical-allowed-1366.png');
+}
+
