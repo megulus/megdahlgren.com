@@ -5,6 +5,7 @@ import Image from './Image';
 
 import grid from '../../../scss/app.scss';
 
+
 @connect((store) => {
     return {
         singlePageApps: store.projects.singlePageApps,

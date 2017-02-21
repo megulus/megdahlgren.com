@@ -12,7 +12,7 @@ export default class Image extends Component {
         const src = require(`${this.props.src}`);
         const imgModClass = this.props.type === 'template'
             ? styles.template
-            : 'null';
+            : styles.nonTemplate;
 
         return (
             <div className={classNames(styles.imgbox, imgModClass)}>
