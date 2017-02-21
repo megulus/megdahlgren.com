@@ -7,18 +7,20 @@ export default class Image extends Component {
 
     render() {
 
-
         /*const className = `styles.${this.props.name}`;*/
-        const className = styles[this.props.name];
+        /*const className = styles[this.props.name];*/
+        const src = require(`${this.props.src}`);
+        const imgModClass = this.props.type === 'template'
+            ? styles.template
+            : 'null';
 
         return (
-            <div>
-                <div className={classNames(styles.imgbox, className)}></div>
+            <div className={classNames(styles.imgbox, imgModClass)}>
+                <img className={styles.imgResponsive} src={src}></img>
             </div>
         );
 
     }
-
 }
 
 

@@ -29,25 +29,18 @@ class PortfolioView extends Component {
         return (
             <div key={i} className={className}>
                 <h3>{item.title}</h3>
-                <Image name={item.name}/>
+                <Image type={item.type} src={item.img}/>
             </div>
         );
     }
 
     render() {
-        /*const singlePageApps = this.props.singlePageApps;
-         const emailTemplates = this.props.emailTemplates;
-         let apps = [];
-         let templates = [];
-         for (let [index, value] of singlePageApps.entries()) {
-         apps.push(this.getItemDiv(value, index));
-         }*/
         const apps = this.getListOfDivs(this.props.singlePageApps);
         const templates = this.getListOfDivs(this.props.emailTemplates);
         return (
-            <div >
+             <div>
                 <div>
-                    <h2 className={grid.row}>Featured Work</h2>
+                    <h2>Single Page Apps</h2>
                     {apps}
 
                 </div>
@@ -56,7 +49,6 @@ class PortfolioView extends Component {
                     {templates}
                 </div>
             </div>
-
         );
     }
 
