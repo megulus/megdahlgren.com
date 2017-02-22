@@ -1,4 +1,12 @@
 
-.headline-font {
-    font-family: 'Raleway', sans-serif;
+.alegreya {
+    font-family: 'Alegreya', serif;
+}
+
+h1, h2, h3 {
+    margin: 5px;
+}
+
+h1 {
+    font-size: 28px;
 }

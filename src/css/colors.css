@@ -1,7 +1,15 @@
 .light-grey-bkgrnd {
-    background-color: #dcdcdc;
+    background-color: #fbfbfb;
 }
 
 .dark-grey-bkgrnd {
-    background-color: #a9a9a9;
+    background-color: #edecec;
+}
+
+.purple-text {
+    color: #891bbb;
+}
+
+.dark-grey-text {
+    color: #554a54;
 }

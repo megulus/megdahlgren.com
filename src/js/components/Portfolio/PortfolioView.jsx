@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import Image from './Image';
 
 import grid from '../../../scss/app.scss';
-
+import styles from './Portfolio.css'
 
 @connect((store) => {
     return {
@@ -39,7 +39,7 @@ class PortfolioView extends Component {
         const apps = this.getListOfDivs(this.props.singlePageApps);
         const templates = this.getListOfDivs(this.props.emailTemplates);
         return (
-             <div>
+             <div className={styles.portfolio}>
                 <div>
                     <h2>Single Page Apps</h2>
                     {apps}

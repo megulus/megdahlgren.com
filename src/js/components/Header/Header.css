@@ -1,3 +1,7 @@
 .header {
     composes: dark-grey-bkgrnd from '../../../css/colors.css';
+    composes: dark-grey-text from '../../../css/colors.css';
+    composes: alegreya from '../../../css/typography.css';
+    margin-left: -200px;
+    margin-right: -200px;
 }

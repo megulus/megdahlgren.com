@@ -18,6 +18,11 @@
     height: auto;
 }
 
+.portfolio {
+    composes: dark-grey-text from '../../../css/colors.css';
+    composes: alegreya from '../../../css/typography.css';
+}
+
 
 
 

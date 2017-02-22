@@ -16,7 +16,7 @@ class Header extends Component {
                 </section>
                 <section className={grid.header}>
                     <div >
-                        <h1>Meg Dahlgren</h1>
+                        <h1>MEG DAHLGREN</h1>
                         <h2>Front End Developer</h2>
                     </div>
                 </section>
