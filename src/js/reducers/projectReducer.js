@@ -25,6 +25,7 @@ function reducer(state = {
             name: 'outlook2011',
             img: './images/ol2011-vertical-allowed-1366.png',
             source: 'https://github.com/megulus/emailtemplates',
+            site: null,
             type: 'template',
         },
         {
@@ -32,6 +33,7 @@ function reducer(state = {
             name: 'iPhone6SPlus',
             img: './images/iphone6splus-vertical-allowed-1366.png',
             source: 'https://github.com/megulus/emailtemplates',
+            site: null,
             type: 'template',
         },
         {
@@ -39,6 +41,7 @@ function reducer(state = {
             name: 'iPhone6',
             img: './images/iphone6s-vertical-allowed-1366.png',
             source: 'https://github.com/megulus/emailtemplates',
+            site: null,
             type: 'template',
         }
     ]

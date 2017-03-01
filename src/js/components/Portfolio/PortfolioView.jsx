@@ -27,10 +27,16 @@ class PortfolioView extends Component {
     getItemDiv(item, i) {
         const name = 'column' + ((i % 3) + 1);
         const className = grid[name];
+        const site = item.site
+            ? <a href={item.site} target="_blank">site</a>
+            : null;
         return (
             <div key={i} className={className}>
                 <h3>{item.title}</h3>
                 <Image type={item.type} src={item.img}/>
+                <a href={item.source} target="_blank">source code</a>
+                {'\u2003'}
+                {site}
             </div>
         );
     }
