@@ -30,11 +30,6 @@ $susy: (columns: 12,
   text-align: center;
 }
 
-/*.galleryItem {
-  @include gallery(4 of 12);
-}*/
-
-
 .column1 {
   @include span(4 of 12 at 1);
 }
@@ -47,13 +42,14 @@ $susy: (columns: 12,
   @include span(4 of 12 at 9);
 }
 
-/*.sidebarL {
-  @include span(4 of 12);
-  @include suffix(8 of 12);
-}*/
 
 .row {
   @include span(12 of 12);
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+
+.sidebarL {
+  @include span(2 of 12);
 }

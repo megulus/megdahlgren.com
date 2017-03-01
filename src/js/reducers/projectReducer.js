@@ -1,5 +1,3 @@
-import '../components/Portfolio/images/iphone6s-vertical-allowed-1366.png'
-
 function reducer(state = {
     singlePageApps: [
         {
@@ -46,12 +44,7 @@ function reducer(state = {
         }
     ]
 }, action) {
-
-    switch (action.type) {
-        case 'SET_PROJECTS': {
-            return {...state}
-        }
-    }
+    
 
     return state;
 }

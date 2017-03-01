@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 
 import AppView from './components/AppView';
 import PortfolioView from './components/Portfolio/PortfolioView';
-import About from './components/About';
+import About from './components/About/About';
 
 import rootReducer from './reducers/index';
 

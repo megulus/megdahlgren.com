@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
+import classNames from 'classnames';
 
 import Image from './Image';
 
@@ -30,10 +31,15 @@ class PortfolioView extends Component {
         const site = item.site
             ? <a href={item.site} target="_blank">site</a>
             : null;
+        const imgModClass = item.type === 'template'
+            ? styles.template
+            : styles.nonTemplate;
         return (
             <div key={i} className={className}>
                 <h3>{item.title}</h3>
-                <Image type={item.type} src={item.img}/>
+                <div className={classNames(styles.imgbox, imgModClass)}>
+                    <Image type={item.type} src={item.img}/>
+                </div>
                 <a href={item.source} target="_blank">source code</a>
                 {'\u2003'}
                 {site}

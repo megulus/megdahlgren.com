@@ -1,0 +1,5 @@
+.about {
+    composes: dark-grey-text from '../../../css/colors.css';
+    composes: alegreya from '../../../css/typography.css';
+    composes: large from '../../../css/typography.css';
+}
