@@ -2,7 +2,16 @@ li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #a9a9a9;
+}
+
 .navbar {
     composes: light-grey-bkgrnd from '../../../css/colors.css';
-    padding: 0.05em;
+    margin-top: -20px;
+    padding-top: 0.015em;
 }
